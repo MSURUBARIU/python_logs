@@ -2,6 +2,11 @@ import csv                     # Used to read CSV-formatted lines from the log f
 from datetime import datetime  # Used to work with timestamps
 
 tasks = {}
+''' ways to implement
+-1 dictionary and open(file)
+-2 for loop that searches contents every time
+-3 dictionary and mmap.mmap()  Should improve performance, but we might have other drawback with really large files.
+'''
 
 with open("logs1.log", "r") as file:
     # Opened the file and testing I can read it.
